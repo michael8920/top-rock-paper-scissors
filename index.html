@@ -1,0 +1,41 @@
+<script>
+    function computerPlay() { 
+        let random = Math.floor(Math.random() * 3);
+        if (random === 0) {
+            return 'rock';
+        } else if (random === 1) {
+            return 'paper';
+        } else {
+            return 'scissors';
+        }
+    }
+    
+    function playRound(playerSelection) {
+        const computerSelection = computerPlay();
+        playerSelection = playerSelection.toUpperCase();
+
+        if ( playerSelection === 'ROCK' && computerSelection === 'rock') {
+            alert('Draw!')
+            } else if ( playerSelection === 'ROCK' && computerSelection === 'paper') {
+                alert('You lose! Paper beats Rock!')
+            } else if ( playerSelection === 'ROCK' && computerSelection === 'scissors') {
+                alert('You win! Rock beats Scissors')
+            } else if ( playerSelection === 'PAPER' && computerSelection === 'rock') {
+                alert('You win! Paper beats Rock!')
+            } else if ( playerSelection === 'PAPER' && computerSelection === 'paper') {
+                alert('Draw!')
+            } else if ( playerSelection === 'PAPER' && computerSelection === 'scissors') {
+                alert('You Lose! Scissors beat Paper!')
+            } else if ( playerSelection === 'SCISSORS' && computerSelection === 'rock') {
+                alert('You lose! Rock beats Scissors!')
+            } else if ( playerSelection === 'SCISSORS' && computerSelection === 'paper') {
+                alert('You win! Scissors beat Paper!')
+            } else if ( playerSelection === 'SCISSORS' && computerSelection === 'scissors') {
+                alert('Draw!') 
+            } else {
+                alert('Please input again.') }
+                
+     }
+
+
+</script>
